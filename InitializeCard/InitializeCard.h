@@ -5,10 +5,10 @@
 
 struct card
 {
-  char symbol;
-  // c = Clubs | h = Hearts | d = Diamonds | s = Spades
-  int value;
-  // From 1 to 13
+	char symbol;
+	// c = Clubs | h = Hearts | d = Diamonds | s = Spades
+	int value;
+	// From 1 to 13
 };
 typedef struct card Card;
 

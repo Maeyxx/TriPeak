@@ -1,0 +1,9 @@
+﻿  Source.c
+C:\Users\roman\Desktop\mini-projet C & algo\TriPeak\TriPeak\Source.c(116,12): warning C4013: 'time' non défini(e) ; extern retournant int pris par défaut
+C:\Users\roman\Desktop\mini-projet C & algo\TriPeak\TriPeak\Source.c(118,29): warning C4020: 'affectcard' : paramètres réels trop nombreux
+C:\Users\roman\Desktop\mini-projet C & algo\TriPeak\TriPeak\Source.c(119,29): warning C4020: 'affectcard' : paramètres réels trop nombreux
+C:\Users\roman\Desktop\mini-projet C & algo\TriPeak\TriPeak\Source.c(120,29): warning C4020: 'affectcard' : paramètres réels trop nombreux
+C:\Users\roman\Desktop\mini-projet C & algo\TriPeak\TriPeak\Source.c(121,29): warning C4020: 'affectcard' : paramètres réels trop nombreux
+C:\Users\roman\Desktop\mini-projet C & algo\TriPeak\TriPeak\Source.c(122,28): warning C4020: 'affectcarddeck' : paramètres réels trop nombreux
+C:\Users\roman\Desktop\mini-projet C & algo\TriPeak\TriPeak\Source.c(115,7): warning C4101: 'arraydeck' : variable locale non référencée
+  TriPeak.vcxproj -> C:\Users\roman\Desktop\mini-projet C & algo\TriPeak\x64\Debug\TriPeak.exe
