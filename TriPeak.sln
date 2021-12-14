@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30621.155
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TriPeak", "TriPeak\TriPeak.vcxproj", "{FAB2A117-6E2F-486B-B55E-03B4B8EAA0DF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FAB2A117-6E2F-486B-B55E-03B4B8EAA0DF}.Debug|x64.ActiveCfg = Debug|x64
+		{FAB2A117-6E2F-486B-B55E-03B4B8EAA0DF}.Debug|x64.Build.0 = Debug|x64
+		{FAB2A117-6E2F-486B-B55E-03B4B8EAA0DF}.Debug|x86.ActiveCfg = Debug|Win32
+		{FAB2A117-6E2F-486B-B55E-03B4B8EAA0DF}.Debug|x86.Build.0 = Debug|Win32
+		{FAB2A117-6E2F-486B-B55E-03B4B8EAA0DF}.Release|x64.ActiveCfg = Release|x64
+		{FAB2A117-6E2F-486B-B55E-03B4B8EAA0DF}.Release|x64.Build.0 = Release|x64
+		{FAB2A117-6E2F-486B-B55E-03B4B8EAA0DF}.Release|x86.ActiveCfg = Release|Win32
+		{FAB2A117-6E2F-486B-B55E-03B4B8EAA0DF}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9E488238-3FA0-4728-960C-DDB8B1BF3098}
+	EndGlobalSection
+EndGlobal
