@@ -1,0 +1,2 @@
+﻿  Source.c
+C:\Users\roman\Desktop\mini-projet C & algo\TriPeak\TriPeak\Source.c(5,10): fatal error C1083: Impossible d'ouvrir le fichier include : 'InitializeCard.h' : No such file or directory
