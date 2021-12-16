@@ -4,6 +4,7 @@
 #include <stdlib.h>
 #include <time.h>
 
+int pickcard;
 int i;
 
 void affectcard(Card arraylayer[], int y) {
@@ -40,7 +41,6 @@ void affectcarddeck (Card arraydeck[]){
 }
 
 int main(int argc, char* argv[]) {
-	int pickcard;
 	// Tableau couche 1 à 4
 	Card arraylayer1[3];
 	Card arraylayer2[6];
@@ -50,10 +50,10 @@ int main(int argc, char* argv[]) {
 	Card arraydeck[24];
 	srand(time(NULL));
 	InitializeCard();
-	affectcard(arraylayer1, 2, pickcard);
-	affectcard(arraylayer2, 5, pickcard);
-	affectcard(arraylayer3, 8, pickcard);
-	affectcard(arraylayer4, 9, pickcard);
-	affectcarddeck(arraycard, pickcard);
+	affectcard(arraylayer1, 2);
+	affectcard(arraylayer2, 5);
+	affectcard(arraylayer3, 8);
+	affectcard(arraylayer4, 9);
+	affectcarddeck(arraycard);
 	return 0;
 }
