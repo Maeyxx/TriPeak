@@ -49,7 +49,6 @@ int main(int argc, char* argv[]) {
 	// Tableau pioche
 	Card arraydeck[24];
 	srand(time(NULL));
-	InitializeCard();
 	affectcard(arraylayer1, 2);
 	affectcard(arraylayer2, 5);
 	affectcard(arraylayer3, 8);
