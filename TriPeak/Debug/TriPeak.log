@@ -1,6 +1,9 @@
 ﻿  Game.c
-C:\Users\roman\Desktop\Game.c(57,15): warning C4244: 'fonction' : conversion de 'time_t' en 'unsigned int', perte possible de données
-C:\Users\roman\Desktop\Game.c(123,8): warning C4101: 'answer' : variable locale non référencée
-C:\Users\roman\Desktop\Game.c(257,18): warning C4244: 'fonction' : conversion de 'time_t' en 'unsigned int', perte possible de données
-C:\Users\roman\Desktop\Game.c(244,6): warning C4101: 'pickcard' : variable locale non référencée
+C:\Users\roman\Desktop\Game.c(55,15): warning C4244: 'fonction' : conversion de 'time_t' en 'unsigned int', perte possible de données
+C:\Users\roman\Desktop\Game.c(121,8): warning C4101: 'answer' : variable locale non référencée
+C:\Users\roman\Desktop\Game.c(255,18): warning C4244: 'fonction' : conversion de 'time_t' en 'unsigned int', perte possible de données
+C:\Users\roman\Desktop\Game.c(242,6): warning C4101: 'pickcard' : variable locale non référencée
+  main.c
+C:\Users\roman\Desktop\main.c(5,14): warning C4013: 'generateGame' non défini(e) ; extern retournant int pris par défaut
+  Génération de code en cours...
   TriPeak.vcxproj -> C:\Users\roman\Desktop\mini-projet C & algo\TriPeak\Debug\TriPeak.exe
