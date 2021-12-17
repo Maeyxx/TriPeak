@@ -1,0 +1,28 @@
+
+Vous avez demande un resume le: 2021-12-17 11:20:37
+Vous avez joue ces cartes :
+7h - 4h - 3c - 10s - 
+Il y avait ces cartes dans la réserve :
+13d - 6h - 9c - 3d - 
+---FIN DE PARTIE---
+
+Vous avez demande un resume le: 2021-12-17 11:27:37
+Vous avez joue ces cartes :
+4d - 8s - 10h - 8c - 
+Il y avait ces cartes dans la réserve :
+7c - 6c - 7h - 1d - 
+---FIN DE PARTIE---
+
+Vous avez demande un resume le: 2021-12-17 11:28:41
+Vous avez joue ces cartes :
+11h - 10d - 3c - 13h - 
+Il y avait ces cartes dans la réserve :
+9d - 1d - 11d - 9h - 9c - 1s - 10c - 8h - 7d - 3d - 1h - 2d - 4h - 8c - 12d - 2c - 8d - 10s - 13c - 6h - 13h - 3c - 10d - 
+---FIN DE PARTIE---
+
+Vous avez demande un resume le: 2021-12-17 11:34:42
+Vous avez joue ces cartes :
+5h - 3c - 8s - 11d - 
+Il y avait ces cartes dans la réserve :
+5c - 12d - 3s - 12h - 10h - 2d - 8d - 9h - 2s - 7s - 13d - 13h - 2h - 4h - 10s - 11c - 8c - 5s - 1s - 10d - 11d - 8s - 3c - 
+---FIN DE PARTIE---
