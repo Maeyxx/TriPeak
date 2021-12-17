@@ -4,13 +4,14 @@
 #include <stdlib.h>
 #include <time.h>
 
+int pickcard;
 int i;
 
-void affectcard(Card arraylayer[], int y, pickcard) {
+void affectcard(Card arraylayer[], int y) {
 	int j = 0;
 	// Affectation des cartes a un layer
 	for (i = 0; i <= y; i++) {
-		pickcard = rand() % 52;
+		pickcard = rand() % (sizeof(arraycard) / sizeof(Card));
 		if (arraycard[pickcard].value != 0) {
 			arraylayer[i-j] = arraycard[pickcard];
 			arraycard[pickcard].value = 0;
@@ -22,12 +23,12 @@ void affectcard(Card arraylayer[], int y, pickcard) {
 	}
 }
 
-void affectcarddeck (Card arraydeck[], pickcard){
+void affectcarddeck (Card arraydeck[]){
 	int h = 0;
-	int g = 23;
+	int g = (sizeof(arraydeck) / sizeof(Card));
 	// Affectation des cartes a la pioche
 	for (i = 0; i <= g; i++) {
-		pickcard = rand() % 52;
+		pickcard = rand() % (sizeof(arraycard) / sizeof(Card));
 		if (arraycard[pickcard].value != 0) {
 			arraydeck[i-h] = arraycard[pickcard];
 			arraycard[pickcard].value = 0;
@@ -40,8 +41,7 @@ void affectcarddeck (Card arraydeck[], pickcard){
 }
 
 int main(int argc, char* argv[]) {
-	int pickcard;
-	// Tableau couche 1 à 4
+	// Tableau couche 1 Ã  4
 	Card arraylayer1[3];
 	Card arraylayer2[6];
 	Card arraylayer3[9];
@@ -49,11 +49,10 @@ int main(int argc, char* argv[]) {
 	// Tableau pioche
 	Card arraydeck[24];
 	srand(time(NULL));
-	InitializeCard();
-	affectcard(arraylayer1, 2, pickcard);
-	affectcard(arraylayer2, 5, pickcard);
-	affectcard(arraylayer3, 8, pickcard);
-	affectcard(arraylayer4, 9, pickcard);
-	affectcarddeck(arraycard, pickcard);
+	affectcard(arraylayer1, 2);
+	affectcard(arraylayer2, 5);
+	affectcard(arraylayer3, 8);
+	affectcard(arraylayer4, 9);
+	affectcarddeck(arraycard);
 	return 0;
 }
