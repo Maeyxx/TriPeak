@@ -1,0 +1,11 @@
+﻿  Game.c
+C:\Users\roman\Desktop\Game.c(47,18): warning C4244: 'fonction' : conversion de 'time_t' en 'unsigned int', perte possible de données
+  main.c
+C:\Users\roman\Desktop\main.c(22,18): warning C4244: 'fonction' : conversion de 'time_t' en 'unsigned int', perte possible de données
+C:\Users\roman\Desktop\main.c(25,16): warning C4013: 'InitializeCard' non défini(e) ; extern retournant int pris par défaut
+C:\Users\roman\Desktop\main.c(28,9): warning C4013: 'shuffle' non défini(e) ; extern retournant int pris par défaut
+C:\Users\roman\Desktop\main.c(31,15): warning C4013: 'AttribueCards' non défini(e) ; extern retournant int pris par défaut
+C:\Users\roman\Desktop\main.c(34,6): warning C4013: 'game' non défini(e) ; extern retournant int pris par défaut
+C:\Users\roman\Desktop\main.c(9,6): warning C4101: 'pickcard' : variable locale non référencée
+  Génération de code en cours...
+  TriPeak.vcxproj -> C:\Users\roman\Desktop\mini-projet C & algo\TriPeak\Debug\TriPeak.exe
