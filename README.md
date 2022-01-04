@@ -19,7 +19,7 @@ Launch program and enter your choice in the console.
 If your card than you take is valid (-1 or +1 of the current card) in the game you can see the card choose is remplace by '00x' card. 
 
 ## Program connect to libraries
-To works properly this program `include libraries` :
+To works properly this program `include libraries` available in **game.h** :
 ```sh
 #include <stdio.h>
 #include <stdlib.h>
