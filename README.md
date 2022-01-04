@@ -38,7 +38,7 @@ If your card than you take is valid (-1 or +1 of the current card) in the game y
 
 
 | SYMBOL | DESCRIPTION | FR |
-| ------ | ------ |
+| ------ | ------ | ------ |
 | c |  clubs | Trèfle |
 | d |  diamonds | Carreaux |
 | h |  heart | Coeur |
