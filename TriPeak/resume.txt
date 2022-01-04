@@ -40,3 +40,10 @@ Vous avez joue ces cartes :
 Il y avait ces cartes dans la reserve :
 9h - 9d - 11h - 7s - 5h - 12d - 4s - 8s - 1h - 10s - 10h - 6h - 4h - 8d - 3c - 12h - 10c - 6d - 2c - 3s - 1s - 10d - 7c - 
 ---FIN DE PARTIE---
+
+Vous avez demande un resume le: 2022-01-04 09:21:28
+Vous avez joue ces cartes :
+9s - -858993460Ì - -858993460Ì - -858993460Ì - 
+Il y avait ces cartes dans la reserve :
+9h - 4d - 9c - 2d - 6h - 8c - 13c - 5h - 5d - 11c - 2s - 7d - 8d - 4c - 6c - 7c - 11s - 10c - 1d - 13s - 9d - 5c - 12c - 
+---FIN DE PARTIE---

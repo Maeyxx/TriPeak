@@ -1,3 +1,8 @@
-﻿  main.c
-C:\Users\roman\Desktop\main.c(6,14): warning C4013: 'generateGame' non défini(e) ; extern retournant int pris par défaut
+﻿  Game.c
+C:\Users\roman\Desktop\Game.c(60,15): warning C4244: 'fonction' : conversion de 'time_t' en 'unsigned int', perte possible de données
+C:\Users\roman\Desktop\Game.c(305,18): warning C4244: 'fonction' : conversion de 'time_t' en 'unsigned int', perte possible de données
+C:\Users\roman\Desktop\Game.c(292,6): warning C4101: 'pickcard' : variable locale non référencée
+C:\Users\roman\Desktop\Game.c(326,8): warning C4013: 'getcwd' non défini(e) ; extern retournant int pris par défaut
+  main.c
+  Génération de code en cours...
   TriPeak.vcxproj -> C:\Users\roman\Desktop\mini-projet C & algo\TriPeak\Debug\TriPeak.exe
