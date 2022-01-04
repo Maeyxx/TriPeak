@@ -106,5 +106,5 @@ We use differents functions in this program
 | sleeping() | void | pause terminal function |
 
 ## Documentations
-In directory **Algorithms/** you can take our algorithm of this program.
+In directory **Algorithms/** you can take our algorithm of this program
 
