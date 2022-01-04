@@ -18,6 +18,33 @@ Launch program and enter your choice in the console.
 ## How it works ?
 If your card than you take is valid (-1 or +1 of the current card) in the game you can see the card choose is remplace by '00x' card. 
 
+
+###### Card is generate 1 from 13
+| VALUE | REAL VALUE (FR) |
+| ------ | ------ |
+| 1 |  AS | 
+| 2 |  2 | 
+| 3 |  3 | 
+| 4 |  4 | 
+| 5 |  5 | 
+| 6 |  6 | 
+| 7 |  7 | 
+| 8 |  8 | 
+| 9 |  9 | 
+| 10 |  10 | 
+| 11 |  Jack | 
+| 12 |  Queen | 
+| 13 |  King | 
+
+
+| SYMBOL | DESCRIPTION | FR |
+| ------ | ------ |
+| c |  clubs | Trèfle |
+| d |  diamonds | Carreaux |
+| h |  heart | Coeur |
+| s |  spade | Pique |
+
+
 ## Program connect to libraries
 To works properly this program `include libraries` available in **game.h** :
 ```sh
