@@ -6,7 +6,7 @@
   Fonction pour nettoyer le terminal
   clear terminal function
 */
-void clearinterface()
+void clearInterface()
 {
 #ifdef _WIN32
 	system("cls");
@@ -145,7 +145,7 @@ void game(Card arraygame[], Card arraylayer1[], Card arraylayer2[], Card arrayla
 	sleeping(3);
 	while (1) {
 		plays++;
-		clearinterface();
+		clearInterface();
 		visual(arraylayer1, arraylayer2, arraylayer3, arraylayer4, arraygame, &x);
 		scanf("%d", &choicemenu);
 		switch (choicemenu) {
@@ -161,18 +161,18 @@ void game(Card arraygame[], Card arraylayer1[], Card arraylayer2[], Card arrayla
 			break;
 		case 1:
 			printf("\nQuel carte jouer (1 a 3) : ");
-			askingcardplay(&cardplay);
+			askingCardPlay(&cardplay);
 			if (cardplay == 1 && arraylayer2[0].value == 0 && arraylayer2[1].value == 0 && ((arraylayer1[cardplay - 1].value + 1) == arraygame[x].value || (arraylayer1[cardplay - 1].value - 1) == arraygame[x].value)) {
-				replacehand(arraygame, arraylayer4, &cardplay, &x);
-				tozero(arraygame, arraylayer4, &cardplay);
+				replaceHand(arraygame, arraylayer4, &cardplay, &x);
+				toZero(arraygame, arraylayer4, &cardplay);
 			}
 			else if (cardplay == 2 && arraylayer2[2].value == 0 && arraylayer2[3].value == 0 && ((arraylayer1[cardplay - 1].value + 1) == arraygame[x].value || (arraylayer1[cardplay - 1].value - 1) == arraygame[x].value)) {
-				replacehand(arraygame, arraylayer4, &cardplay, &x);
-				tozero(arraygame, arraylayer4, &cardplay);
+				replaceHand(arraygame, arraylayer4, &cardplay, &x);
+				toZero(arraygame, arraylayer4, &cardplay);
 			}
 			else if (cardplay == 3 && arraylayer2[4].value == 0 && arraylayer2[5].value == 0 && ((arraylayer1[cardplay - 1].value + 1) == arraygame[x].value || (arraylayer1[cardplay - 1].value - 1) == arraygame[x].value)) {
-				replacehand(arraygame, arraylayer4, &cardplay, &x);
-				tozero(arraygame, arraylayer4, &cardplay);
+				replaceHand(arraygame, arraylayer4, &cardplay, &x);
+				toZero(arraygame, arraylayer4, &cardplay);
 			}
 			else {
 				printf("Choix invalide\n");
@@ -180,30 +180,30 @@ void game(Card arraygame[], Card arraylayer1[], Card arraylayer2[], Card arrayla
 			break;
 		case 2:
 			printf("\nQuel carte jouer (1 a 6) : ");
-			askingcardplay(&cardplay);
+			askingCardPlay(&cardplay);
 			if (cardplay == 1 && arraylayer3[0].value == 0 && arraylayer3[1].value == 0 && ((arraylayer2[cardplay - 1].value + 1) == arraygame[x].value || (arraylayer2[cardplay - 1].value - 1) == arraygame[x].value)) {
-				replacehand(arraygame, arraylayer4, &cardplay, &x);
-				tozero(arraygame, arraylayer4, &cardplay);
+				replaceHand(arraygame, arraylayer4, &cardplay, &x);
+				toZero(arraygame, arraylayer4, &cardplay);
 			}
 			else if (cardplay == 2 && arraylayer3[1].value == 0 && arraylayer3[2].value == 0 && ((arraylayer2[cardplay - 1].value + 1) == arraygame[x].value || (arraylayer2[cardplay - 1].value - 1) == arraygame[x].value)) {
-				replacehand(arraygame, arraylayer4, &cardplay, &x);
-				tozero(arraygame, arraylayer4, &cardplay);
+				replaceHand(arraygame, arraylayer4, &cardplay, &x);
+				toZero(arraygame, arraylayer4, &cardplay);
 			}
 			else if (cardplay == 3 && arraylayer3[3].value == 0 && arraylayer3[4].value == 0 && ((arraylayer2[cardplay - 1].value + 1) == arraygame[x].value || (arraylayer2[cardplay - 1].value - 1) == arraygame[x].value)) {
-				replacehand(arraygame, arraylayer4, &cardplay, &x);
-				tozero(arraygame, arraylayer4, &cardplay);
+				replaceHand(arraygame, arraylayer4, &cardplay, &x);
+				toZero(arraygame, arraylayer4, &cardplay);
 			}
 			else if (cardplay == 4 && arraylayer3[4].value == 0 && arraylayer3[5].value == 0 && ((arraylayer2[cardplay - 1].value + 1) == arraygame[x].value || (arraylayer2[cardplay - 1].value - 1) == arraygame[x].value)) {
-				replacehand(arraygame, arraylayer4, &cardplay, &x);
-				tozero(arraygame, arraylayer4, &cardplay);
+				replaceHand(arraygame, arraylayer4, &cardplay, &x);
+				toZero(arraygame, arraylayer4, &cardplay);
 			}
 			else if (cardplay == 5 && arraylayer3[6].value == 0 && arraylayer3[7].value == 0 && ((arraylayer2[cardplay - 1].value + 1) == arraygame[x].value || (arraylayer2[cardplay - 1].value - 1) == arraygame[x].value)) {
-				replacehand(arraygame, arraylayer4, &cardplay, &x);
-				tozero(arraygame, arraylayer4, &cardplay);
+				replaceHand(arraygame, arraylayer4, &cardplay, &x);
+				toZero(arraygame, arraylayer4, &cardplay);
 			}
 			else if (cardplay == 6 && arraylayer3[7].value == 0 && arraylayer3[8].value == 0 && ((arraylayer2[cardplay - 1].value + 1) == arraygame[x].value || (arraylayer2[cardplay - 1].value - 1) == arraygame[x].value)) {
-				replacehand(arraygame, arraylayer4, &cardplay, &x);
-				tozero(arraygame, arraylayer4, &cardplay);
+				replaceHand(arraygame, arraylayer4, &cardplay, &x);
+				toZero(arraygame, arraylayer4, &cardplay);
 			}
 			else {
 				printf("Choix invalide\n");
@@ -212,11 +212,11 @@ void game(Card arraygame[], Card arraylayer1[], Card arraylayer2[], Card arrayla
 			break;
 		case 3:
 			printf("\nQuel carte jouer (1 a 9) : ");
-			askingcardplay(&cardplay);
+			askingCardPlay(&cardplay);
 			if (arraylayer4[cardplay - 1].value == 0 && arraylayer4[cardplay].value == 0 && ((arraylayer3[cardplay - 1].value + 1) == arraygame[x].value || (arraylayer3[cardplay - 1].value - 1) == arraygame[x].value))
 			{
-				replacehand(arraygame, arraylayer4, &cardplay, &x);
-				tozero(arraygame, arraylayer4, &cardplay);
+				replaceHand(arraygame, arraylayer4, &cardplay, &x);
+				toZero(arraygame, arraylayer4, &cardplay);
 			}
 			else {
 				printf("Choix invalide\n");
@@ -224,12 +224,12 @@ void game(Card arraygame[], Card arraylayer1[], Card arraylayer2[], Card arrayla
 			break;
 		case 4:
 			printf("\nQuel carte jouer (1 a 10) : ");
-			askingcardplay(&cardplay);
+			askingCardPlay(&cardplay);
 
 			if ((arraylayer4[cardplay - 1].value + 1) == arraygame[x].value || (arraylayer4[cardplay - 1].value - 1) == arraygame[x].value)
 			{
-				replacehand(arraygame, arraylayer4, &cardplay, &x);
-				tozero(arraygame, arraylayer4, &cardplay);
+				replaceHand(arraygame, arraylayer4, &cardplay, &x);
+				toZero(arraygame, arraylayer4, &cardplay);
 			}
 			else {
 				printf("\nChoix invalide\n");
@@ -238,7 +238,7 @@ void game(Card arraygame[], Card arraylayer1[], Card arraylayer2[], Card arrayla
 			break;
 		case 5:
 			printf("\nMerci d'avoir jouer, au plaisir de vous revoir !\n");
-			clearinterface();
+			clearInterface();
 			goodbye();
 			exit(0);
 			break;
@@ -247,7 +247,7 @@ void game(Card arraygame[], Card arraylayer1[], Card arraylayer2[], Card arrayla
 			break;
 		case 7:
 			saveGame(arraygame, arraydeck, &plays);
-			clearinterface();
+			clearInterface();
 			goodbye();
 			exit(0);
 			break;
@@ -264,7 +264,7 @@ void game(Card arraygame[], Card arraylayer1[], Card arraylayer2[], Card arrayla
   Fonction de demande de carte
   Function to ask card
 */
-void askingcardplay(int* pointeurcardplay)
+void askingCardPlay(int* pointeurcardplay)
 {
 	scanf("%d", pointeurcardplay);
 	printf("\n");
@@ -339,7 +339,7 @@ void visual(Card arraylayer1[], Card arraylayer2[], Card arraylayer3[], Card arr
   Fonction de remplacement de carte par une carte par 0
   Card replacement function by a card by 0
 */
-void tozero(Card arraygame[], Card layer[], int* pointeurcardplay)
+void toZero(Card arraygame[], Card layer[], int* pointeurcardplay)
 {
 	layer[*pointeurcardplay - 1].value = 0;
 	layer[*pointeurcardplay - 1].symbol = 'x';
@@ -351,7 +351,7 @@ void tozero(Card arraygame[], Card layer[], int* pointeurcardplay)
   function that replaces the card in the hand
 */
 
-void replacehand(Card arraygame[], Card layer[], int* pointeurcardplay, int* pointeurx)
+void replaceHand(Card arraygame[], Card layer[], int* pointeurcardplay, int* pointeurx)
 {
 	arraygame[*pointeurx + 1] = layer[*pointeurcardplay - 1];
 	*pointeurx += 1;
@@ -449,7 +449,7 @@ void saveGame(Card arraygame[], Card arraydeck[], int* plays) {
 	fprintf(fptr, "\n---FIN DE PARTIE---\n");
 	fclose(fptr);
 
-	clearinterface();
+	clearInterface();
 
 	printf("---SAUVEGARDE TERMINE ---\n");
 	printf("Fichier sauvegarde a l'espace de fichier : %s\\resume.txt \n", path);
