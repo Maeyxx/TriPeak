@@ -1,19 +1,21 @@
 ﻿#include "Game.h"
 
 
+
 /*
   (Changed from operating system) : clear terminal function / Fonction pour nettoyer le terminal
   @void
 */
 void clearInterface()
 {
-#ifdef _WIN32	
+#ifdef _WIN32
 	system("cls");
 #endif
 #ifdef __unix__
 	system("clear");
 #endif
 }
+
 
 
 /*
@@ -31,14 +33,12 @@ void sleeping(int time)
 #endif
 }
 
-
 /*
   Initialize the card package and increment each card structure in the arraycard array / Initialise le paquet de carte et incremente chaque structure de carte dans le tableau arraycard
   @param : arraycard : card package / Packet de carte du jeu
   @return : 0
 */
 int InitializeCard(Card arraycard[])
-
 {
 	int specific_card = 0;
 	char symbol = '0';
@@ -58,6 +58,8 @@ int InitializeCard(Card arraycard[])
 		case 4:
 			symbol = 's';
 			break;
+		default:
+			break;
 		}
 		for (int a = 1; a <= 13; a++)
 		{
@@ -73,11 +75,11 @@ int InitializeCard(Card arraycard[])
 	return 0;
 }
 
+
 /*
   Card shuffle function / Fonction de melange des cartes
   @param : arraycard : card package / Packet de carte du jeu
   @void
-
 */
 void shuffle(Card arraycard[])
 {
@@ -91,6 +93,7 @@ void shuffle(Card arraycard[])
 	}
 }
 
+
 /*
   Assignment of cards to the different layer function / Fonction attribution des cartes au different layer
   @param : arraylayer1 : card of layer 1 / Packet de carte de la couche 1
@@ -101,35 +104,35 @@ void shuffle(Card arraycard[])
   @param : arraycard : card package / Packet de carte du jeu
   @void
 */
-void AttribueCards(Card arraylayer1[], Card arraylayer2[], Card arraylayer3[], Card arraylayer4[], Card arraydeck[], Card arraycard[])
+void attribueCards(Card arraylayer1[], Card arraylayer2[], Card arraylayer3[], Card arraylayer4[], Card arraydeck[], Card arraycard[])
 {
-	int compteur = 0;
+	int counter = 0;
 	for (int a = 0; a <= 23; a++)
 	{
 		arraydeck[a] = arraycard[a];
 	}
 	for (int a = 24; a <= 26; a++)
 	{
-		arraylayer1[compteur] = arraycard[a];
-		compteur++;
+		arraylayer1[counter] = arraycard[a];
+		counter++;
 	}
-	compteur = 0;
+	counter = 0;
 	for (int a = 27; a <= 32; a++)
 	{
-		arraylayer2[compteur] = arraycard[a];
-		compteur++;
+		arraylayer2[counter] = arraycard[a];
+		counter++;
 	}
-	compteur = 0;
+	counter = 0;
 	for (int a = 33; a <= 41; a++)
 	{
-		arraylayer3[compteur] = arraycard[a];
-		compteur++;
+		arraylayer3[counter] = arraycard[a];
+		counter++;
 	}
-	compteur = 0;
+	counter = 0;
 	for (int a = 42; a <= 51; a++)
 	{
-		arraylayer4[compteur] = arraycard[a];
-		compteur++;
+		arraylayer4[counter] = arraycard[a];
+		counter++;
 	}
 }
 
@@ -143,21 +146,23 @@ void AttribueCards(Card arraylayer1[], Card arraylayer2[], Card arraylayer3[], C
   @param : arraydeck : card of deck / Packet de carte du deck
   @void
 */
-void game(Card arraygame[], Card arraylayer1[], Card arraylayer2[], Card arraylayer3[], Card arraylayer4[], Card arraydeck[]) {
+void game(Card arraygame[], Card arraylayer1[], Card arraylayer2[], Card arraylayer3[], Card arraylayer4[], Card arraydeck[])
+{
 	int cardplay = 0;
-	int* pointeurcardplay = &cardplay;
+	int* pointercardplay = &cardplay;
 	int x = 0;
-	int* pointeurx = &cardplay;
+	int* pointerx = &x;
 	int m = 23;
-	int* pointeurm = &m;
+	int* pointerm = &m;
 	int plays = 0;
-	int* pointeurplays = &plays;
+	int* pointerplays = &plays;
 	int choicemenu;
+	char* loop = "enter";
 	arraygame[x] = arraydeck[m];
 	m--;
 	welcome();
 	sleeping(3);
-	while (1) {
+	while (strcmp(loop, "enter") == 0) {
 		plays++;
 		clearInterface();
 		visual(arraylayer1, arraylayer2, arraylayer3, arraylayer4, arraygame, &x);
@@ -165,7 +170,7 @@ void game(Card arraygame[], Card arraylayer1[], Card arraylayer2[], Card arrayla
 		switch (choicemenu) {
 		case 0:
 			if (m < 0) {
-				printf("\n Plus de carte dans la pioches \n");
+				printf("\n No more cards in the deck \n");
 			}
 			else {
 				arraygame[x + 1] = arraydeck[m];
@@ -174,7 +179,7 @@ void game(Card arraygame[], Card arraylayer1[], Card arraylayer2[], Card arrayla
 			}
 			break;
 		case 1:
-			printf("\nQuel carte jouer (1 a 3) : ");
+			printf("\nWhich card play (1 to 3) : ");
 			askingCardPlay(&cardplay);
 			if (cardplay == 1 && arraylayer2[0].value == 0 && arraylayer2[1].value == 0 && ((arraylayer1[cardplay - 1].value + 1) == arraygame[x].value || (arraylayer1[cardplay - 1].value - 1) == arraygame[x].value)) {
 				replaceHand(arraygame, arraylayer1, &cardplay, &x);
@@ -189,11 +194,11 @@ void game(Card arraygame[], Card arraylayer1[], Card arraylayer2[], Card arrayla
 				toZero(arraygame, arraylayer1, &cardplay);
 			}
 			else {
-				printf("Choix invalide\n");
+				printf("\nInvalid choice\n");
 			}
 			break;
 		case 2:
-			printf("\nQuel carte jouer (1 a 6) : ");
+			printf("\nWhich card play (1 to 6) : ");
 			askingCardPlay(&cardplay);
 			if (cardplay == 1 && arraylayer3[0].value == 0 && arraylayer3[1].value == 0 && ((arraylayer2[cardplay - 1].value + 1) == arraygame[x].value || (arraylayer2[cardplay - 1].value - 1) == arraygame[x].value)) {
 				replaceHand(arraygame, arraylayer2, &cardplay, &x);
@@ -220,12 +225,12 @@ void game(Card arraygame[], Card arraylayer1[], Card arraylayer2[], Card arrayla
 				toZero(arraygame, arraylayer2, &cardplay);
 			}
 			else {
-				printf("Choix invalide\n");
+				printf("\nInvalid choice\n");
 
 			}
 			break;
 		case 3:
-			printf("\nQuel carte jouer (1 a 9) : ");
+			printf("\nWhich card play (1 to 9) : ");
 			askingCardPlay(&cardplay);
 			if (arraylayer4[cardplay - 1].value == 0 && arraylayer4[cardplay].value == 0 && ((arraylayer3[cardplay - 1].value + 1) == arraygame[x].value || (arraylayer3[cardplay - 1].value - 1) == arraygame[x].value))
 			{
@@ -233,11 +238,11 @@ void game(Card arraygame[], Card arraylayer1[], Card arraylayer2[], Card arrayla
 				toZero(arraygame, arraylayer3, &cardplay);
 			}
 			else {
-				printf("Choix invalide\n");
+				printf("\nInvalid choice\n");
 			}
 			break;
 		case 4:
-			printf("\nQuel carte jouer (1 a 10) : ");
+			printf("\nWhich card play (1 to 10) : ");
 			askingCardPlay(&cardplay);
 
 			if ((arraylayer4[cardplay - 1].value + 1) == arraygame[x].value || (arraylayer4[cardplay - 1].value - 1) == arraygame[x].value)
@@ -246,15 +251,16 @@ void game(Card arraygame[], Card arraylayer1[], Card arraylayer2[], Card arrayla
 				toZero(arraygame, arraylayer4, &cardplay);
 			}
 			else {
-				printf("\nChoix invalide\n");
+				printf("\nInvalid choice\n");
 			}
 
 			break;
 		case 5:
-			printf("\nMerci d'avoir jouer, au plaisir de vous revoir !\n");
+			printf("\nThanks for playing, hope to see you again !\n");
 			clearInterface();
 			goodbye();
-			exit(0);
+			sleeping(1);
+			loop = "end";
 			break;
 		case 6:
 			restart();
@@ -263,10 +269,11 @@ void game(Card arraygame[], Card arraylayer1[], Card arraylayer2[], Card arrayla
 			saveGame(arraygame, arraydeck, &plays);
 			clearInterface();
 			goodbye();
-			exit(0);
+			sleeping(1);
+			loop = "end";
 			break;
 		default:
-			printf("\nChoix invalide \n");
+			printf("\nInvalid choice \n");
 			break;
 		}
 		sleeping(1);
@@ -276,12 +283,12 @@ void game(Card arraygame[], Card arraylayer1[], Card arraylayer2[], Card arrayla
 
 /*
   Function to ask card / Fonction de demande de carte
-  @param : pointeurcardplay : Card to current play / La carte courante à jouer
+  @param : pointercardplay : Card to current play / La carte courante à jouer
   @void
 */
-void askingCardPlay(int* pointeurcardplay)
+void askingCardPlay(int* pointercardplay)
 {
-	scanf("%d", pointeurcardplay);
+	scanf("%d", pointercardplay);
 	printf("\n");
 }
 
@@ -301,6 +308,7 @@ void welcome()
 	printf("    888     888     888 888        Y8b.     888  888 888 \"88b      X88 \n");
 	printf("    888     888     888 888         \"Y8888  \"Y888888 888  888  88888P' \n\n");
 }
+
 
 /*
   Visual goodbye message function / Fonction d'affichage de fin de partie
@@ -329,10 +337,10 @@ void goodbye()
   @param : arraylayer3 : card of layer 3 / Packet de carte de la couche 3
   @param : arraylayer4 : card of layer 4 / Packet de carte de la couche 4
   @param : arraygame : card of game / Packet de carte du jeu
-  @param : pointeurx : x pointer / pointeur de x
+  @param : pointerx : x pointer / pointer de x
   @void
 */
-void visual(Card arraylayer1[], Card arraylayer2[], Card arraylayer3[], Card arraylayer4[], Card arraygame[], int* pointeurx)
+void visual(Card arraylayer1[], Card arraylayer2[], Card arraylayer3[], Card arraylayer4[], Card arraygame[], int* pointerx)
 {
 	printf("------------------------------------------------     ----------    -----------\n");
 	printf("|  Tripeaks game by Alexis, Gabriel and Roman  |     |  Game  |    |  layer  |\n");
@@ -348,25 +356,24 @@ void visual(Card arraylayer1[], Card arraylayer2[], Card arraylayer3[], Card arr
 	printf("|                                                             |    |         |\n");
 	printf("---------------------------------------------------------------    -----------\n");
 	printf("\n--------------\n");
-	printf("| Hand : %02d%c |\n", arraygame[*pointeurx].value, arraygame[*pointeurx].symbol);
+	printf("| Hand : %02d%c |\n", arraygame[*pointerx].value, arraygame[*pointerx].symbol);
 	printf("--------------\n");
-	printf("\n\n0. \tDraw from deck\n1-4.Layer choice\n5. \tEnd Game\n6. \tNew Game\n7. \tSave\n");
-	printf("\nChoice\n:");
+	printf("\n\n0. \tDraw from deck\n1-4. \tLayer choice\n5. \tEnd Game\n6. \tNew Game\n7. \tSave\n");
+	printf("\nChoice : ");
 }
-
 
 
 /*
   Card replacement function by a card by 0 / Fonction de remplacement de carte par une carte par 0
   @param : arraygame : card of game / Packet de carte du jeu
   @param : layer : array of current layer / Tableau courant de la couche
-  @param : pointeurcardplay : cardPlay pointer / pointeur de x
+  @param : pointercardplay : cardPlay pointer / pointer de x
   @void
 */
-void toZero(Card arraygame[], Card layer[], int* pointeurcardplay)
+void toZero(Card arraygame[], Card layer[], int* pointercardplay)
 {
-	layer[*pointeurcardplay - 1].value = 0;
-	layer[*pointeurcardplay - 1].symbol = 'x';
+	layer[*pointercardplay - 1].value = 0;
+	layer[*pointercardplay - 1].symbol = 'x';
 }
 
 
@@ -374,33 +381,36 @@ void toZero(Card arraygame[], Card layer[], int* pointeurcardplay)
   function that replaces the card in the hand / fonction qui remplace la carte dans la main
   @param : arraygame : card of game / Packet de carte du jeu
   @param : layer : array of current layer / Tableau courant de la couche
-  @param : pointeurcardplay : cardPlay pointer / pointeur de x
-  @param : pointeurx : x pointer / pointeur de x
+  @param : pointercardplay : cardPlay pointer / pointer de x
+  @param : pointerx : x pointer / pointer de x
   @void
 */
-
-void replaceHand(Card arraygame[], Card layer[], int* pointeurcardplay, int* pointeurx)
+void replaceHand(Card arraygame[], Card layer[], int* pointercardplay, int* pointerx)
 {
-	arraygame[*pointeurx + 1] = layer[*pointeurcardplay - 1];
-	*pointeurx += 1;
+	arraygame[*pointerx + 1] = layer[*pointercardplay - 1];
+	*pointerx += 1;
 }
+
 
 /*
   Restart function and call generation of the game / Fonction de restart et appel de la generation du jeu
   @void
 */
 void restart()
+
 {
-	printf("\nVous avez decider de relancer la partie\n");
-	printf("... Nouvelle partie en cours ... \n");
+	printf("\nYou have decided to restart the game\n");
+	printf("... New game in progress ... \n");
 	generateGame();
 }
 
+
 /*
-  generate game function / Fonction de generation du jeu
-  @void
+generate game function / Fonction de generation du jeu
+@void
 */
 void generateGame() {
+
 
 	// Packet de cartes entier
 	// Entire card pack
@@ -421,11 +431,6 @@ void generateGame() {
 	Card arraydeck[24];
 	Card arraygame[52];
 
-	// Initialisation du random
-	// Initialize the random
-
-	srand(time(NULL));
-
 	// Fonction d'initialisation des cartes
 	// Card initialization function
 
@@ -439,7 +444,7 @@ void generateGame() {
 	// Fonction attribution des cartes au different layer
 	// Assignment of cards to the different layer function
 
-	AttribueCards(arraylayer1, arraylayer2, arraylayer3, arraylayer4, arraydeck, arraycard);
+	attribueCards(arraylayer1, arraylayer2, arraylayer3, arraylayer4, arraydeck, arraycard);
 
 	// Fonction de jeu
 	// Game function 
@@ -447,12 +452,13 @@ void generateGame() {
 	game(arraygame, arraylayer1, arraylayer2, arraylayer3, arraylayer4, arraydeck);
 }
 
+
 /*
-  Function which saves a summary of the game / Fonction qui sauvegarde un resume de la partie
-  @param : arraygame : card of game / Packet de carte du jeu
-  @param : arraydeck : Card into the deck / Les cartes dans le deck
-  @param : plays : number of play / Nombre de tour joue
-  @void
+Function which saves a summary of the game / Fonction qui sauvegarde un resume de la partie
+@param : arraygame : card of game / Packet de carte du jeu
+@param : arraydeck : Card into the deck / Les cartes dans le deck
+@param : plays : number of play / Nombre de tour joue
+@void
 */
 void saveGame(Card arraygame[], Card arraydeck[], int* plays) {
 
@@ -460,28 +466,28 @@ void saveGame(Card arraygame[], Card arraydeck[], int* plays) {
 	getcwd(path, 200);
 
 	FILE* fptr;
-	fptr = fopen("resume.txt", "a+");
+	fptr = fopen("summary.txt", "a+");
 
 	time_t t = time(NULL);
 	struct tm tm = *localtime(&t);
-	fprintf(fptr, "\nVous avez demande un resume le: %d-%02d-%02d %02d:%02d:%02d\n", tm.tm_year + 1900, tm.tm_mon + 1, tm.tm_mday, tm.tm_hour, tm.tm_min, tm.tm_sec);
+	fprintf(fptr, "\nYou asked for a summary the : %d-%02d-%02d %02d:%02d:%02d\n", tm.tm_year + 1900, tm.tm_mon + 1, tm.tm_mday, tm.tm_hour, tm.tm_min, tm.tm_sec);
 
-	fprintf(fptr, "Vous avez joue ces cartes :\n");
+	fprintf(fptr, "You played these cards :\n");
 	for (int i = 0; i < *plays; i++) {
 		fprintf(fptr, "%d%c - ", arraygame[i].value, arraygame[i].symbol);
 	}
 
-	fprintf(fptr, "\nIl y avait ces cartes dans la reserve :\n");
+	fprintf(fptr, "\nThese cards were left in the reserve :\n");
 	for (int i = 0; i < 23; i++) {
 		fprintf(fptr, "%d%c - ", arraydeck[i].value, arraydeck[i].symbol);
 	}
-	fprintf(fptr, "\n---FIN DE PARTIE---\n");
+	fprintf(fptr, "\n---End of the game---\n");
 	fclose(fptr);
 
 	clearInterface();
 
-	printf("---SAUVEGARDE TERMINE ---\n");
-	printf("Fichier sauvegarde a l'espace de fichier : %s\\resume.txt \n", path);
+	printf("---Save end---\n");
+	printf("File save to file space : %s\\summary.txt \n", path);
 	system("pause");
 }
 
