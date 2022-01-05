@@ -26,8 +26,12 @@ struct card
 };
 typedef struct card Card;
 
-// Prototype des fonctions
+
 // Prototyp of functions
+// Prototype des fonctions
+// see game.c to know what function do
+// Voir le fichier game.c pour connaître ce que fait la fonction ainsi que ses paramètres
+
 int InitializeCard();
 void shuffle();
 void AttribueCards();

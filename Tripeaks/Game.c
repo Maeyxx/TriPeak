@@ -2,9 +2,8 @@
 
 
 /*
-  > Changed from operating system
-  Fonction pour nettoyer le terminal
-  clear terminal function
+  (Changed from operating system) : clear terminal function / Fonction pour nettoyer le terminal
+  @void
 */
 void clearInterface()
 {
@@ -18,9 +17,9 @@ void clearInterface()
 
 
 /*
-  > Changed from operating system
-  Fonction pour prendre en pause le terminal
-  pause terminal function
+  (Changed from operating system) : pause terminal function / Fonction pour mettre en pause le terminal
+  @param : time : time to sleep / temps de pause du terminal
+  @void
 */
 void sleeping(int time)
 {
@@ -32,12 +31,14 @@ void sleeping(int time)
 #endif
 }
 
-int InitializeCard(Card arraycard[])
-/*
-Initialise le paquet de carte et incr�mente chaque structure de carte dans le tableau arraycard.
-Initialize the card package and increment each card structure in the arraycard array.
 
+/*
+  Initialize the card package and increment each card structure in the arraycard array / Initialise le paquet de carte et incremente chaque structure de carte dans le tableau arraycard
+  @param : arraycard : card package / Packet de carte du jeu
+  @return : 0
 */
+int InitializeCard(Card arraycard[])
+
 {
 	int specific_card = 0;
 	char symbol = '0';
@@ -73,8 +74,9 @@ Initialize the card package and increment each card structure in the arraycard a
 }
 
 /*
-Fonction de melange des cartes
-Card shuffle function
+  Card shuffle function / Fonction de melange des cartes
+  @param : arraycard : card package / Packet de carte du jeu
+  @void
 
 */
 void shuffle(Card arraycard[])
@@ -90,8 +92,14 @@ void shuffle(Card arraycard[])
 }
 
 /*
-  Fonction attribution des cartes au different layer
-  Assignment of cards to the different layer function
+  Assignment of cards to the different layer function / Fonction attribution des cartes au different layer
+  @param : arraylayer1 : card of layer 1 / Packet de carte de la couche 1
+  @param : arraylayer2 : card of layer 2 / Packet de carte de la couche 2
+  @param : arraylayer3 : card of layer 3 / Packet de carte de la couche 3
+  @param : arraylayer4 : card of layer 4 / Packet de carte de la couche 4
+  @param : arraydeck : card of deck / Packet de carte du deck
+  @param : arraycard : card package / Packet de carte du jeu
+  @void
 */
 void AttribueCards(Card arraylayer1[], Card arraylayer2[], Card arraylayer3[], Card arraylayer4[], Card arraydeck[], Card arraycard[])
 {
@@ -126,8 +134,14 @@ void AttribueCards(Card arraylayer1[], Card arraylayer2[], Card arraylayer3[], C
 }
 
 /*
-  Fonction de jeu
-  Game function
+  Game function / Fonction de jeu
+  @param : arraygame : card of game / Packet de carte du jeu
+  @param : arraylayer1 : card of layer 1 / Packet de carte de la couche 1
+  @param : arraylayer2 : card of layer 2 / Packet de carte de la couche 2
+  @param : arraylayer3 : card of layer 3 / Packet de carte de la couche 3
+  @param : arraylayer4 : card of layer 4 / Packet de carte de la couche 4
+  @param : arraydeck : card of deck / Packet de carte du deck
+  @void
 */
 void game(Card arraygame[], Card arraylayer1[], Card arraylayer2[], Card arraylayer3[], Card arraylayer4[], Card arraydeck[]) {
 	int cardplay = 0;
@@ -261,8 +275,9 @@ void game(Card arraygame[], Card arraylayer1[], Card arraylayer2[], Card arrayla
 
 
 /*
-  Fonction de demande de carte
-  Function to ask card
+  Function to ask card / Fonction de demande de carte
+  @param : pointeurcardplay : Card to current play / La carte courante à jouer
+  @void
 */
 void askingCardPlay(int* pointeurcardplay)
 {
@@ -272,8 +287,8 @@ void askingCardPlay(int* pointeurcardplay)
 
 
 /*
-  Fonction d'affichage de message de bienvenue
-  Visual welcome message function
+  Visual welcome message function / Fonction d'affichage de message de bienvenue
+  @void
 */
 void welcome()
 {
@@ -288,8 +303,8 @@ void welcome()
 }
 
 /*
-  Fonction d'affichage de fin de partie
-  Visual goodbye message function
+  Visual goodbye message function / Fonction d'affichage de fin de partie
+  @void
 */
 void goodbye()
 {
@@ -308,8 +323,14 @@ void goodbye()
 
 
 /*
-  Fonction d'affichage de la partie
-  Visual game
+  Visual game / Fonction d'affichage de la partie
+  @param : arraylayer1 : card of layer 1 / Packet de carte de la couche 1
+  @param : arraylayer2 : card of layer 2 / Packet de carte de la couche 2
+  @param : arraylayer3 : card of layer 3 / Packet de carte de la couche 3
+  @param : arraylayer4 : card of layer 4 / Packet de carte de la couche 4
+  @param : arraygame : card of game / Packet de carte du jeu
+  @param : pointeurx : x pointer / pointeur de x
+  @void
 */
 void visual(Card arraylayer1[], Card arraylayer2[], Card arraylayer3[], Card arraylayer4[], Card arraygame[], int* pointeurx)
 {
@@ -336,8 +357,11 @@ void visual(Card arraylayer1[], Card arraylayer2[], Card arraylayer3[], Card arr
 
 
 /*
-  Fonction de remplacement de carte par une carte par 0
-  Card replacement function by a card by 0
+  Card replacement function by a card by 0 / Fonction de remplacement de carte par une carte par 0
+  @param : arraygame : card of game / Packet de carte du jeu
+  @param : layer : array of current layer / Tableau courant de la couche
+  @param : pointeurcardplay : cardPlay pointer / pointeur de x
+  @void
 */
 void toZero(Card arraygame[], Card layer[], int* pointeurcardplay)
 {
@@ -347,8 +371,12 @@ void toZero(Card arraygame[], Card layer[], int* pointeurcardplay)
 
 
 /*
-  fonction qui remplace la carte dans la main
-  function that replaces the card in the hand
+  function that replaces the card in the hand / fonction qui remplace la carte dans la main
+  @param : arraygame : card of game / Packet de carte du jeu
+  @param : layer : array of current layer / Tableau courant de la couche
+  @param : pointeurcardplay : cardPlay pointer / pointeur de x
+  @param : pointeurx : x pointer / pointeur de x
+  @void
 */
 
 void replaceHand(Card arraygame[], Card layer[], int* pointeurcardplay, int* pointeurx)
@@ -358,8 +386,8 @@ void replaceHand(Card arraygame[], Card layer[], int* pointeurcardplay, int* poi
 }
 
 /*
-  Fonction de restart et appel de la generation du jeu
-  Restart function and call generation of the game
+  Restart function and call generation of the game / Fonction de restart et appel de la generation du jeu
+  @void
 */
 void restart()
 {
@@ -369,10 +397,9 @@ void restart()
 }
 
 /*
-  Fonction de generation du jeu
-  generate game function
+  generate game function / Fonction de generation du jeu
+  @void
 */
-
 void generateGame() {
 
 	// Packet de cartes entier
@@ -421,10 +448,12 @@ void generateGame() {
 }
 
 /*
-	Fonction qui sauvegarde un resum� de la partie
-	Function which saves a summary of the game
+  Function which saves a summary of the game / Fonction qui sauvegarde un resume de la partie
+  @param : arraygame : card of game / Packet de carte du jeu
+  @param : arraydeck : Card into the deck / Les cartes dans le deck
+  @param : plays : number of play / Nombre de tour joue
+  @void
 */
-
 void saveGame(Card arraygame[], Card arraydeck[], int* plays) {
 
 	char path[200];
