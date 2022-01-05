@@ -20,21 +20,21 @@ If your card than you take is valid (-1 or +1 of the current card) in the game y
 
 
 ###### Card is generate 1 from 13
-| VALUE | REAL VALUE (FR) |
-| ------ | ------ |
-| 1 |  AS | 
-| 2 |  2 | 
-| 3 |  3 | 
-| 4 |  4 | 
-| 5 |  5 | 
-| 6 |  6 | 
-| 7 |  7 | 
-| 8 |  8 | 
-| 9 |  9 | 
-| 10 |  10 | 
-| 11 |  Jack | 
-| 12 |  Queen | 
-| 13 |  King | 
+| VALUE | REAL VALUE (EN) | (FR) |
+| ------ | ------ | ------ |
+| 1 |  AS | AS | 
+| 2 |  2 | 2 | 
+| 3 |  3 | 3 | 
+| 4 |  4 | 4 | 
+| 5 |  5 | 5 |
+| 6 |  6 | 6 |
+| 7 |  7 | 7 | 
+| 8 |  8 | 8 | 
+| 9 |  9 | 9 | 
+| 10 |  10 | 10 | 
+| 11 |  Jack | Valet | 
+| 12 |  Queen | Dame | 
+| 13 |  King | Roi |
 
 
 | SYMBOL | EN | FR |

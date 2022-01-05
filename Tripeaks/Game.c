@@ -8,7 +8,7 @@
 */
 void clearInterface()
 {
-#ifdef _WIN32
+#ifdef _WIN32	
 	system("cls");
 #endif
 #ifdef __unix__
@@ -163,16 +163,16 @@ void game(Card arraygame[], Card arraylayer1[], Card arraylayer2[], Card arrayla
 			printf("\nQuel carte jouer (1 a 3) : ");
 			askingCardPlay(&cardplay);
 			if (cardplay == 1 && arraylayer2[0].value == 0 && arraylayer2[1].value == 0 && ((arraylayer1[cardplay - 1].value + 1) == arraygame[x].value || (arraylayer1[cardplay - 1].value - 1) == arraygame[x].value)) {
-				replaceHand(arraygame, arraylayer4, &cardplay, &x);
-				toZero(arraygame, arraylayer4, &cardplay);
+				replaceHand(arraygame, arraylayer1, &cardplay, &x);
+				toZero(arraygame, arraylayer1, &cardplay);
 			}
 			else if (cardplay == 2 && arraylayer2[2].value == 0 && arraylayer2[3].value == 0 && ((arraylayer1[cardplay - 1].value + 1) == arraygame[x].value || (arraylayer1[cardplay - 1].value - 1) == arraygame[x].value)) {
-				replaceHand(arraygame, arraylayer4, &cardplay, &x);
-				toZero(arraygame, arraylayer4, &cardplay);
+				replaceHand(arraygame, arraylayer1, &cardplay, &x);
+				toZero(arraygame, arraylayer1, &cardplay);
 			}
 			else if (cardplay == 3 && arraylayer2[4].value == 0 && arraylayer2[5].value == 0 && ((arraylayer1[cardplay - 1].value + 1) == arraygame[x].value || (arraylayer1[cardplay - 1].value - 1) == arraygame[x].value)) {
-				replaceHand(arraygame, arraylayer4, &cardplay, &x);
-				toZero(arraygame, arraylayer4, &cardplay);
+				replaceHand(arraygame, arraylayer1, &cardplay, &x);
+				toZero(arraygame, arraylayer1, &cardplay);
 			}
 			else {
 				printf("Choix invalide\n");
@@ -182,28 +182,28 @@ void game(Card arraygame[], Card arraylayer1[], Card arraylayer2[], Card arrayla
 			printf("\nQuel carte jouer (1 a 6) : ");
 			askingCardPlay(&cardplay);
 			if (cardplay == 1 && arraylayer3[0].value == 0 && arraylayer3[1].value == 0 && ((arraylayer2[cardplay - 1].value + 1) == arraygame[x].value || (arraylayer2[cardplay - 1].value - 1) == arraygame[x].value)) {
-				replaceHand(arraygame, arraylayer4, &cardplay, &x);
-				toZero(arraygame, arraylayer4, &cardplay);
+				replaceHand(arraygame, arraylayer2, &cardplay, &x);
+				toZero(arraygame, arraylayer2, &cardplay);
 			}
 			else if (cardplay == 2 && arraylayer3[1].value == 0 && arraylayer3[2].value == 0 && ((arraylayer2[cardplay - 1].value + 1) == arraygame[x].value || (arraylayer2[cardplay - 1].value - 1) == arraygame[x].value)) {
-				replaceHand(arraygame, arraylayer4, &cardplay, &x);
-				toZero(arraygame, arraylayer4, &cardplay);
+				replaceHand(arraygame, arraylayer2, &cardplay, &x);
+				toZero(arraygame, arraylayer2, &cardplay);
 			}
 			else if (cardplay == 3 && arraylayer3[3].value == 0 && arraylayer3[4].value == 0 && ((arraylayer2[cardplay - 1].value + 1) == arraygame[x].value || (arraylayer2[cardplay - 1].value - 1) == arraygame[x].value)) {
-				replaceHand(arraygame, arraylayer4, &cardplay, &x);
-				toZero(arraygame, arraylayer4, &cardplay);
+				replaceHand(arraygame, arraylayer2, &cardplay, &x);
+				toZero(arraygame, arraylayer2, &cardplay);
 			}
 			else if (cardplay == 4 && arraylayer3[4].value == 0 && arraylayer3[5].value == 0 && ((arraylayer2[cardplay - 1].value + 1) == arraygame[x].value || (arraylayer2[cardplay - 1].value - 1) == arraygame[x].value)) {
-				replaceHand(arraygame, arraylayer4, &cardplay, &x);
-				toZero(arraygame, arraylayer4, &cardplay);
+				replaceHand(arraygame, arraylayer2, &cardplay, &x);
+				toZero(arraygame, arraylayer2, &cardplay);
 			}
 			else if (cardplay == 5 && arraylayer3[6].value == 0 && arraylayer3[7].value == 0 && ((arraylayer2[cardplay - 1].value + 1) == arraygame[x].value || (arraylayer2[cardplay - 1].value - 1) == arraygame[x].value)) {
-				replaceHand(arraygame, arraylayer4, &cardplay, &x);
-				toZero(arraygame, arraylayer4, &cardplay);
+				replaceHand(arraygame, arraylayer2, &cardplay, &x);
+				toZero(arraygame, arraylayer2, &cardplay);
 			}
 			else if (cardplay == 6 && arraylayer3[7].value == 0 && arraylayer3[8].value == 0 && ((arraylayer2[cardplay - 1].value + 1) == arraygame[x].value || (arraylayer2[cardplay - 1].value - 1) == arraygame[x].value)) {
-				replaceHand(arraygame, arraylayer4, &cardplay, &x);
-				toZero(arraygame, arraylayer4, &cardplay);
+				replaceHand(arraygame, arraylayer2, &cardplay, &x);
+				toZero(arraygame, arraylayer2, &cardplay);
 			}
 			else {
 				printf("Choix invalide\n");
@@ -215,8 +215,8 @@ void game(Card arraygame[], Card arraylayer1[], Card arraylayer2[], Card arrayla
 			askingCardPlay(&cardplay);
 			if (arraylayer4[cardplay - 1].value == 0 && arraylayer4[cardplay].value == 0 && ((arraylayer3[cardplay - 1].value + 1) == arraygame[x].value || (arraylayer3[cardplay - 1].value - 1) == arraygame[x].value))
 			{
-				replaceHand(arraygame, arraylayer4, &cardplay, &x);
-				toZero(arraygame, arraylayer4, &cardplay);
+				replaceHand(arraygame, arraylayer3, &cardplay, &x);
+				toZero(arraygame, arraylayer3, &cardplay);
 			}
 			else {
 				printf("Choix invalide\n");
