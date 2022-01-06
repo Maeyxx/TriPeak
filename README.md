@@ -1,5 +1,5 @@
 # TRIPEAKS 
-### By FRICHOT Roman | GIBON Gabriel | PASQUIER ALEXIS
+### By FRICHOT Roman | GIBON Gabriel | PASQUIER ALEXIS...
 
 ![N|Solid](https://www.polesup-delasalle.fr/wp-content/uploads/sites/5/2020/01/Sticker-Fili%C3%A8re-SI_Publi%C3%A9-250x250.jpg) 
 
