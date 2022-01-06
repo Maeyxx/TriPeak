@@ -18,8 +18,6 @@ Launch program and enter your choice in the console.
 ## How it works ?
 If your card than you take is valid (-1 or +1 of the current card) in the game you can see the card choose is remplace by '00x' card. 
 
-<<<<<<< HEAD
-
 ###### Card is generate 1 from 13
 | VALUE | REAL VALUE (FR) |
 | ------ | ------ |
@@ -36,8 +34,11 @@ If your card than you take is valid (-1 or +1 of the current card) in the game y
 | 11 |  Jack | 
 | 12 |  Queen | 
 | 13 |  King | 
-=======
+
+
 You can choose 9 choice : 
+
+
 | VALUE | REAL VALUE (EN) | (FR) |
 | ------ | ------ | ------ |
 | 0 |  Draw card from deck | Prendre une carte de la pioche | 
@@ -66,8 +67,6 @@ You can choose 9 choice :
 | 11 |  Jack | Valet | 
 | 12 |  Queen | Dame | 
 | 13 |  King | Roi |
->>>>>>> bbfb4b4 (Production Version)
-
 
 | SYMBOL | EN | FR |
 | ------ | ------ | ------ |
