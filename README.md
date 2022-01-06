@@ -18,28 +18,9 @@ Launch program and enter your choice in the console.
 ## How it works ?
 If your card than you take is valid (-1 or +1 of the current card) in the game you can see the card choose is remplace by '00x' card. 
 
-###### Card is generate 1 from 13
-| VALUE | REAL VALUE (FR) |
-| ------ | ------ |
-| 1 |  AS | 
-| 2 |  2 | 
-| 3 |  3 | 
-| 4 |  4 | 
-| 5 |  5 | 
-| 6 |  6 | 
-| 7 |  7 | 
-| 8 |  8 | 
-| 9 |  9 | 
-| 10 |  10 | 
-| 11 |  Jack | 
-| 12 |  Queen | 
-| 13 |  King | 
-
-
 You can choose 9 choice : 
 
-
-| VALUE | REAL VALUE (EN) | (FR) |
+| VALUE | (EN) | (FR) |
 | ------ | ------ | ------ |
 | 0 |  Draw card from deck | Prendre une carte de la pioche | 
 | 1 |  Choose card from layer 1 | Choisir une carte de la couche 1 | 
@@ -51,8 +32,9 @@ You can choose 9 choice :
 | 7 |  Save the game into a .txt file | Sauvegarder la partie dans un fichier resumé .txt | 
 | 8 |  Play with auto-resolution mode | Jouer avec le mode d'auto-résolution (automatique) | 
 
+
 ###### Card is generate 1 from 13
-| VALUE | REAL VALUE (EN) | (FR) |
+| VALUE | (EN) | (FR) |
 | ------ | ------ | ------ |
 | 1 |  AS | AS | 
 | 2 |  2 | 2 | 
@@ -127,7 +109,6 @@ We use differents functions in this program
 | restart() | void | This function restart the game |
 | generateGame() | void | This function generate the game |
 | saveGame() | void | This function save the game |
-<<<<<<< HEAD
 
 ## Documentations
 In directory **Algorithms/** you can take our algorithm of this program.
@@ -142,6 +123,5 @@ In directory **Algorithms/** you can take our algorithm of this program.
 | sleeping() | void | pause terminal function |
 
 ## Documentations
-In directory **Algorithms/** you can take our algorithm of this program
->>>>>>> bbfb4b4 (Production Version)
+Go to **[this site](https://docs.google.com/document/d/1Q2mAL1IWtuvaTlGDmiTICal7OWSXamm_RVFq7MhKx8c/edit)** and you see our algorithm of this program
 
