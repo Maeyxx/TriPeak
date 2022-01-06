@@ -109,10 +109,6 @@ We use differents functions in this program
 | restart() | void | This function restart the game |
 | generateGame() | void | This function generate the game |
 | saveGame() | void | This function save the game |
-
-## Documentations
-In directory **Algorithms/** you can take our algorithm of this program.
-=======
 | toZero() | void | Card replacement function by a card by 0 |
 | welcome() | void | Visual welcome message function |
 | visual() | void | Visual game |
@@ -121,6 +117,8 @@ In directory **Algorithms/** you can take our algorithm of this program.
 | goodbye() | void | Visual goodbye message function |
 | clearInterface() | void | clear terminal function |
 | sleeping() | void | pause terminal function |
+| autoResolution() | void | Game is automatically play |
+
 
 ## Documentations
 Go to **[this site](https://docs.google.com/document/d/1Q2mAL1IWtuvaTlGDmiTICal7OWSXamm_RVFq7MhKx8c/edit)** and you see our algorithm of this program
