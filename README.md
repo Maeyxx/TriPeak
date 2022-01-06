@@ -18,6 +18,7 @@ Launch program and enter your choice in the console.
 ## How it works ?
 If your card than you take is valid (-1 or +1 of the current card) in the game you can see the card choose is remplace by '00x' card. 
 
+<<<<<<< HEAD
 
 ###### Card is generate 1 from 13
 | VALUE | REAL VALUE (FR) |
@@ -35,6 +36,37 @@ If your card than you take is valid (-1 or +1 of the current card) in the game y
 | 11 |  Jack | 
 | 12 |  Queen | 
 | 13 |  King | 
+=======
+You can choose 9 choice : 
+| VALUE | REAL VALUE (EN) | (FR) |
+| ------ | ------ | ------ |
+| 0 |  Draw card from deck | Prendre une carte de la pioche | 
+| 1 |  Choose card from layer 1 | Choisir une carte de la couche 1 | 
+| 2 |  Choose card from layer 2 | Choisir une carte de la couche 2 | 
+| 3 |  Choose card from layer 3 | Choisir une carte de la couche 3 | 
+| 4 |  Choose card from layer 4 | Choisir une carte de la couche 4 | 
+| 5 |  End the game | Finir la partie |
+| 6 |  New game | Nouvelle partie |
+| 7 |  Save the game into a .txt file | Sauvegarder la partie dans un fichier resumé .txt | 
+| 8 |  Play with auto-resolution mode | Jouer avec le mode d'auto-résolution (automatique) | 
+
+###### Card is generate 1 from 13
+| VALUE | REAL VALUE (EN) | (FR) |
+| ------ | ------ | ------ |
+| 1 |  AS | AS | 
+| 2 |  2 | 2 | 
+| 3 |  3 | 3 | 
+| 4 |  4 | 4 | 
+| 5 |  5 | 5 |
+| 6 |  6 | 6 |
+| 7 |  7 | 7 | 
+| 8 |  8 | 8 | 
+| 9 |  9 | 9 | 
+| 10 |  10 | 10 | 
+| 11 |  Jack | Valet | 
+| 12 |  Queen | Dame | 
+| 13 |  King | Roi |
+>>>>>>> bbfb4b4 (Production Version)
 
 
 | SYMBOL | EN | FR |
@@ -96,7 +128,21 @@ We use differents functions in this program
 | restart() | void | This function restart the game |
 | generateGame() | void | This function generate the game |
 | saveGame() | void | This function save the game |
+<<<<<<< HEAD
 
 ## Documentations
 In directory **Algorithms/** you can take our algorithm of this program.
+=======
+| toZero() | void | Card replacement function by a card by 0 |
+| welcome() | void | Visual welcome message function |
+| visual() | void | Visual game |
+| askingCardPlay() | void | Function to ask card |
+| replaceHand() | void | function that replaces the card in the hand |
+| goodbye() | void | Visual goodbye message function |
+| clearInterface() | void | clear terminal function |
+| sleeping() | void | pause terminal function |
+
+## Documentations
+In directory **Algorithms/** you can take our algorithm of this program
+>>>>>>> bbfb4b4 (Production Version)
 
