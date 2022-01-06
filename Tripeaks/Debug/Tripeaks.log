@@ -1,5 +1,4 @@
 ﻿  Game.c
-C:\Users\roman\Desktop\mini-projet C & algo\Tripeaks\Tripeaks\Game.c(84,15): warning C4244: 'fonction' : conversion de 'time_t' en 'unsigned int', perte possible de données
-C:\Users\roman\Desktop\mini-projet C & algo\Tripeaks\Tripeaks\Game.c(427,18): warning C4244: 'fonction' : conversion de 'time_t' en 'unsigned int', perte possible de données
-C:\Users\roman\Desktop\mini-projet C & algo\Tripeaks\Tripeaks\Game.c(460,8): warning C4013: 'getcwd' non défini(e) ; extern retournant int pris par défaut
+C:\Users\roman\Desktop\mini-projet C & algo\Tripeaks\Tripeaks\Game.c(86,15): warning C4244: 'fonction' : conversion de 'time_t' en 'unsigned int', perte possible de données
+C:\Users\roman\Desktop\mini-projet C & algo\Tripeaks\Tripeaks\Game.c(619,8): warning C4013: 'getcwd' non défini(e) ; extern retournant int pris par défaut
   Tripeaks.vcxproj -> C:\Users\roman\Desktop\mini-projet C & algo\Tripeaks\Debug\Tripeaks.exe

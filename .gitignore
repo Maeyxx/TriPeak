@@ -1,1 +1,8 @@
 .vs
+Tripeaks.sln
+Debug
+Tripeaks/Debug
+Tripeaks/resume.txt
+Tripeaks/Tripeaks.vcxproj
+Tripeaks/Tripeaks.vcxproj.filters
+Tripeaks/Tripeaks.vcxproj.user

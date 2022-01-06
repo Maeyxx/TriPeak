@@ -45,3 +45,4 @@ void visual(Card arraylayer1[], Card arraylayer2[], Card arraylayer3[], Card arr
 void askingCardPlay();
 void replaceHand(Card arraygame[], Card layer[], int* pointeurcardplay, int* pointeurx);
 void goodbye();
+void autoResolution(Card arraygame[], Card arraylayer1[], Card arraylayer2[], Card arraylayer3[], Card arraylayer4[], Card arraydeck[]);
